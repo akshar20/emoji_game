@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6CF490F98F3526E5511C623547122175"
+               BlueprintIdentifier = "291B03BBCAB4524BFDA37E6A12ECFB79"
                BuildableName = "Pods_EmojiGame.framework"
                BlueprintName = "Pods-EmojiGame"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6CF490F98F3526E5511C623547122175"
+            BlueprintIdentifier = "291B03BBCAB4524BFDA37E6A12ECFB79"
             BuildableName = "Pods_EmojiGame.framework"
             BlueprintName = "Pods-EmojiGame"
             ReferencedContainer = "container:Pods.xcodeproj">

@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		483352452257CA8A00FA7E42 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 483352442257CA8A00FA7E42 /* GoogleService-Info.plist */; };
+		48112F3D225BA47D0056F5C2 /* SelectGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48112F3C225BA47D0056F5C2 /* SelectGameViewController.swift */; };
+		48162F1B22582BE000D5954C /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48162F1A22582BE000D5954C /* SignUpViewController.swift */; };
+		48162F1D22583E3E00D5954C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 48162F1C22583E3E00D5954C /* GoogleService-Info.plist */; };
 		9B07530D225648700098A854 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B07530C225648700098A854 /* AppDelegate.swift */; };
 		9B07530F225648700098A854 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B07530E225648700098A854 /* ViewController.swift */; };
 		9B075312225648700098A854 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B075310225648700098A854 /* Main.storyboard */; };
@@ -17,7 +19,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		483352442257CA8A00FA7E42 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		48112F3C225BA47D0056F5C2 /* SelectGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectGameViewController.swift; sourceTree = "<group>"; };
+		48162F1A22582BE000D5954C /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		48162F1C22583E3E00D5954C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8B4FE25C379CACA75A00FC16 /* Pods_EmojiGame.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EmojiGame.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B075309225648700098A854 /* EmojiGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmojiGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B07530C225648700098A854 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -48,7 +52,6 @@
 				E69289A09BE53AEBED6FB1E0 /* Pods-EmojiGame.debug.xcconfig */,
 				E0847B22077C66B093969322 /* Pods-EmojiGame.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -75,11 +78,13 @@
 			children = (
 				9B07530C225648700098A854 /* AppDelegate.swift */,
 				9B07530E225648700098A854 /* ViewController.swift */,
+				48162F1A22582BE000D5954C /* SignUpViewController.swift */,
+				48112F3C225BA47D0056F5C2 /* SelectGameViewController.swift */,
 				9B075310225648700098A854 /* Main.storyboard */,
 				9B075313225648720098A854 /* Assets.xcassets */,
 				9B075315225648720098A854 /* LaunchScreen.storyboard */,
 				9B075318225648720098A854 /* Info.plist */,
-				483352442257CA8A00FA7E42 /* GoogleService-Info.plist */,
+				48162F1C22583E3E00D5954C /* GoogleService-Info.plist */,
 			);
 			path = EmojiGame;
 			sourceTree = "<group>";
@@ -104,6 +109,7 @@
 				9B075306225648700098A854 /* Frameworks */,
 				9B075307225648700098A854 /* Resources */,
 				EC78AD8EAEFA0B8AFB9A58E3 /* [CP] Embed Pods Frameworks */,
+				32C78F03578048D02B5803EE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -153,7 +159,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B075317225648720098A854 /* LaunchScreen.storyboard in Resources */,
-				483352452257CA8A00FA7E42 /* GoogleService-Info.plist in Resources */,
+				48162F1D22583E3E00D5954C /* GoogleService-Info.plist in Resources */,
 				9B075314225648720098A854 /* Assets.xcassets in Resources */,
 				9B075312225648700098A854 /* Main.storyboard in Resources */,
 			);
@@ -162,6 +168,28 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		32C78F03578048D02B5803EE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EmojiGame/Pods-EmojiGame-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/GoogleMobileVision/GoogleMVFaceDetectorResources.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMVFaceDetectorResources.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EmojiGame/Pods-EmojiGame-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		5B7A5BB38EDCECDFCE1FC89E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -193,15 +221,23 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-EmojiGame/Pods-EmojiGame-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleAPIClientForREST/GoogleAPIClientForREST.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
-				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleAPIClientForREST.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -215,7 +251,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48162F1B22582BE000D5954C /* SignUpViewController.swift in Sources */,
 				9B07530F225648700098A854 /* ViewController.swift in Sources */,
+				48112F3D225BA47D0056F5C2 /* SelectGameViewController.swift in Sources */,
 				9B07530D225648700098A854 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
