@@ -27,16 +27,14 @@ class MultiPlayerViewController: UIViewController {
     
     
     // Variables
+    var total_players = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Firebase reference
         ref = Database.database().reference()
-   
-        
-        sharedPreferenceGameID
-        
-        
+
     }
     
     
@@ -49,10 +47,7 @@ class MultiPlayerViewController: UIViewController {
         
         // Game id
         let randomID = self.randomString(length: 8)
-        
-        // Add game id to the phone
-        self.sharedPreference.set(randomID, forKey: "sharedPreferenceGameID")
-
+    
         // Set id to the outlet
         self.gameIDLabel.text = randomID
     
@@ -63,6 +58,7 @@ class MultiPlayerViewController: UIViewController {
         // Add new game id to Firebase
         self.ref.child("games").child(randomID).child("leader").setValue(playerData[0])
         self.ref.child("games").child(randomID).child("gameStatus").setValue("notRunning")
+        self.ref.child("games").child(randomID).child("totalPlayers").setValue("0")
         
         // Add this leader to the game
         let data = ["email": playerData[0], "name": playerData[1], "score": "0", "status": "ready", "timeConsumed": "0"]
@@ -71,9 +67,13 @@ class MultiPlayerViewController: UIViewController {
         // set button title
         self.startGameBtn.setTitle("START GAME", for: .normal)
         
+        // Add game id to the phone
+        self.sharedPreference.set("\(randomID)", forKey: "sharedPreferenceGameID")
+
         // Update players list
         self.updatePlayersList(gameID: randomID)
         
+    
     }
     
     
@@ -84,12 +84,16 @@ class MultiPlayerViewController: UIViewController {
         
         
         if(self.startGameBtn.titleLabel?.text == "START GAME"){
-           
-            let mGameSB:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            let mGameVC = mGameSB.instantiateViewController(withIdentifier: "mGameSB")
-            self.present(mGameVC, animated: true, completion: nil)
+            
+            if(self.isKeyPresentInUserDefaults(key: "sharedPreferenceGameID")){
+                let gameID = self.sharedPreference.string(forKey: "sharedPreferenceGameID")!
+                self.ref.child("games/\(gameID)/gameStatus").setValue("Running")
+            }
             
         }else{
+            
+            
+            
             // Check for valid game ID
             self.ref.child("games").observeSingleEvent(of: .value, with: { (snapshot) in
                 
@@ -112,7 +116,7 @@ class MultiPlayerViewController: UIViewController {
                         
                         for(key, val) in name{
                             
-                            if(key != "leader"){
+                            if(key != "leader" && key != "gameStatus" && key != "totalPlayers"){
                                 let player = val as! [String: String]
                                 if (player["email"]! == playerData[0]){
                                     playerExist = true
@@ -145,6 +149,8 @@ class MultiPlayerViewController: UIViewController {
                     
                     
                     
+                 
+                    
                     
                 }else{
                     
@@ -157,6 +163,20 @@ class MultiPlayerViewController: UIViewController {
                 }
                 
                 
+                // Observe : MULTIPLAYER LOGIC BROKEN
+//                let gameId = self.sharedPreference.string(forKey: "sharedPreferenceGameID")!
+//                var currentGameStatus = ""
+//                self.ref.child("games/\(gameId)/gameStatus").observe(.value, with: {(data) in
+//                    let stat = data.value as? String
+//                    currentGameStatus = stat!
+//
+//                    if(currentGameStatus == "Running"){
+//                        let mGameSB:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+//                        let mGameVC = mGameSB.instantiateViewController(withIdentifier: "mGameSB")
+//                        self.present(mGameVC, animated: true, completion: nil)
+//                    }
+//                })
+//
                 
                 
             })
@@ -166,7 +186,7 @@ class MultiPlayerViewController: UIViewController {
     
     // Update players list
     func updatePlayersList(gameID: String){
-        
+    
             self.playersList.text = ""
             var players = ""
             var counter = 0
@@ -178,7 +198,7 @@ class MultiPlayerViewController: UIViewController {
                 
                 for(key, val) in name{
                     
-                    if(key != "leader"){
+                    if(key != "leader" && key != "gameStatus" && key != "totalPlayers"){
                         counter += 1
                         
                         let player = val as! [String: String]
@@ -190,6 +210,12 @@ class MultiPlayerViewController: UIViewController {
                         
                         
                         
+                    }else{
+                        
+                        if(key == "totalPlayers"){
+                            self.total_players = val as! String
+                            self.ref.child("games/\(gameID)/totalPlayers").setValue("\(self.total_players + 1)")
+                        }
                     }
                 }
                 
@@ -198,6 +224,14 @@ class MultiPlayerViewController: UIViewController {
                     counter = 0
                 
             })
+        
+        
+        if(self.total_players == 2){
+            let mGameSB:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let mGameVC = mGameSB.instantiateViewController(withIdentifier: "mGameSB")
+            self.present(mGameVC, animated: true, completion: nil)
+        }
+       
     }
     
     
