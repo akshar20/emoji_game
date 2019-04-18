@@ -7,8 +7,6 @@ target 'EmojiGame' do
 
   # Pods for EmojiGame
 
-  pod 'Firebase/Database'
-  pod 'Firebase/MLVision'
-  pod 'Firebase/MLVisionFaceModel'
+
 
 end

@@ -10,11 +10,19 @@
 		48112F3D225BA47D0056F5C2 /* SelectGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48112F3C225BA47D0056F5C2 /* SelectGameViewController.swift */; };
 		48162F1B22582BE000D5954C /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48162F1A22582BE000D5954C /* SignUpViewController.swift */; };
 		48162F1D22583E3E00D5954C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 48162F1C22583E3E00D5954C /* GoogleService-Info.plist */; };
+		48C4F96722610E4E006CCCA1 /* MGAMEViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C4F96622610E4E006CCCA1 /* MGAMEViewController.swift */; };
+		48EC900F22600021000D2664 /* MultiPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48EC900E22600021000D2664 /* MultiPlayerViewController.swift */; };
 		9B07530D225648700098A854 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B07530C225648700098A854 /* AppDelegate.swift */; };
 		9B07530F225648700098A854 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B07530E225648700098A854 /* ViewController.swift */; };
 		9B075312225648700098A854 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B075310225648700098A854 /* Main.storyboard */; };
 		9B075314225648720098A854 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B075313225648720098A854 /* Assets.xcassets */; };
 		9B075317225648720098A854 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B075315225648720098A854 /* LaunchScreen.storyboard */; };
+		9BCC4184225E344500FC6566 /* SinglePlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BCC4183225E344500FC6566 /* SinglePlayerViewController.swift */; };
+		9BDAE35A225E4533004E15DF /* face_normal.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9BDAE354225E4531004E15DF /* face_normal.jpg */; };
+		9BDAE35B225E4533004E15DF /* face_smile.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9BDAE355225E4532004E15DF /* face_smile.jpg */; };
+		9BDAE35C225E4533004E15DF /* face_EClose.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9BDAE356225E4532004E15DF /* face_EClose.jpg */; };
+		9BDAE35D225E4533004E15DF /* face_LEClose.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9BDAE357225E4532004E15DF /* face_LEClose.jpg */; };
+		9BDAE35E225E4533004E15DF /* face_REClose.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9BDAE358225E4533004E15DF /* face_REClose.jpg */; };
 		EA3B48FD7E2ADDAF875D058E /* Pods_EmojiGame.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B4FE25C379CACA75A00FC16 /* Pods_EmojiGame.framework */; };
 /* End PBXBuildFile section */
 
@@ -22,6 +30,8 @@
 		48112F3C225BA47D0056F5C2 /* SelectGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectGameViewController.swift; sourceTree = "<group>"; };
 		48162F1A22582BE000D5954C /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		48162F1C22583E3E00D5954C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		48C4F96622610E4E006CCCA1 /* MGAMEViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MGAMEViewController.swift; sourceTree = "<group>"; };
+		48EC900E22600021000D2664 /* MultiPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiPlayerViewController.swift; sourceTree = "<group>"; };
 		8B4FE25C379CACA75A00FC16 /* Pods_EmojiGame.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EmojiGame.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B075309225648700098A854 /* EmojiGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmojiGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B07530C225648700098A854 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -30,6 +40,12 @@
 		9B075313225648720098A854 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9B075316225648720098A854 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9B075318225648720098A854 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9BCC4183225E344500FC6566 /* SinglePlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinglePlayerViewController.swift; sourceTree = "<group>"; };
+		9BDAE354225E4531004E15DF /* face_normal.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = face_normal.jpg; sourceTree = "<group>"; };
+		9BDAE355225E4532004E15DF /* face_smile.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = face_smile.jpg; sourceTree = "<group>"; };
+		9BDAE356225E4532004E15DF /* face_EClose.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = face_EClose.jpg; sourceTree = "<group>"; };
+		9BDAE357225E4532004E15DF /* face_LEClose.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = face_LEClose.jpg; sourceTree = "<group>"; };
+		9BDAE358225E4533004E15DF /* face_REClose.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = face_REClose.jpg; sourceTree = "<group>"; };
 		E0847B22077C66B093969322 /* Pods-EmojiGame.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmojiGame.release.xcconfig"; path = "Target Support Files/Pods-EmojiGame/Pods-EmojiGame.release.xcconfig"; sourceTree = "<group>"; };
 		E69289A09BE53AEBED6FB1E0 /* Pods-EmojiGame.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmojiGame.debug.xcconfig"; path = "Target Support Files/Pods-EmojiGame/Pods-EmojiGame.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -76,10 +92,14 @@
 		9B07530B225648700098A854 /* EmojiGame */ = {
 			isa = PBXGroup;
 			children = (
+				9BDAE352225E451C004E15DF /* photos */,
 				9B07530C225648700098A854 /* AppDelegate.swift */,
 				9B07530E225648700098A854 /* ViewController.swift */,
 				48162F1A22582BE000D5954C /* SignUpViewController.swift */,
 				48112F3C225BA47D0056F5C2 /* SelectGameViewController.swift */,
+				9BCC4183225E344500FC6566 /* SinglePlayerViewController.swift */,
+				48EC900E22600021000D2664 /* MultiPlayerViewController.swift */,
+				48C4F96622610E4E006CCCA1 /* MGAMEViewController.swift */,
 				9B075310225648700098A854 /* Main.storyboard */,
 				9B075313225648720098A854 /* Assets.xcassets */,
 				9B075315225648720098A854 /* LaunchScreen.storyboard */,
@@ -87,6 +107,18 @@
 				48162F1C22583E3E00D5954C /* GoogleService-Info.plist */,
 			);
 			path = EmojiGame;
+			sourceTree = "<group>";
+		};
+		9BDAE352225E451C004E15DF /* photos */ = {
+			isa = PBXGroup;
+			children = (
+				9BDAE354225E4531004E15DF /* face_normal.jpg */,
+				9BDAE358225E4533004E15DF /* face_REClose.jpg */,
+				9BDAE357225E4532004E15DF /* face_LEClose.jpg */,
+				9BDAE355225E4532004E15DF /* face_smile.jpg */,
+				9BDAE356225E4532004E15DF /* face_EClose.jpg */,
+			);
+			path = photos;
 			sourceTree = "<group>";
 		};
 		A651B8B3E9E25F4080D0CAC9 /* Frameworks */ = {
@@ -158,10 +190,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BDAE35E225E4533004E15DF /* face_REClose.jpg in Resources */,
+				9BDAE35D225E4533004E15DF /* face_LEClose.jpg in Resources */,
+				9BDAE35A225E4533004E15DF /* face_normal.jpg in Resources */,
+				9BDAE35B225E4533004E15DF /* face_smile.jpg in Resources */,
 				9B075317225648720098A854 /* LaunchScreen.storyboard in Resources */,
 				48162F1D22583E3E00D5954C /* GoogleService-Info.plist in Resources */,
 				9B075314225648720098A854 /* Assets.xcassets in Resources */,
 				9B075312225648700098A854 /* Main.storyboard in Resources */,
+				9BDAE35C225E4533004E15DF /* face_EClose.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,9 +289,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				48162F1B22582BE000D5954C /* SignUpViewController.swift in Sources */,
+				48C4F96722610E4E006CCCA1 /* MGAMEViewController.swift in Sources */,
 				9B07530F225648700098A854 /* ViewController.swift in Sources */,
 				48112F3D225BA47D0056F5C2 /* SelectGameViewController.swift in Sources */,
+				48EC900F22600021000D2664 /* MultiPlayerViewController.swift in Sources */,
 				9B07530D225648700098A854 /* AppDelegate.swift in Sources */,
+				9BCC4184225E344500FC6566 /* SinglePlayerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
